@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+
+
+/* 서브페이지 교육 > 인증시험 web size start --------------------------------------------------------------- */
+/* 교육 > 인증시험 draftSight section*/
+.education-certification .draftSight-text{width: 60%; word-break: keep-all; position: relative; z-index: 2; }
+.education-certification .draftSight-img {width: 43%;}
+.education-certification .draftSight-text h3{font-size: 22px; margin: 20px 0 25px;}
+/* .education-certification .draftSight-text h3 > br{display: none;} */
+.sub_wrap_parent.education-certification .draftSight-text ul li{position: relative; padding-left: 35px; margin-bottom: 20px; width: 80%; word-break: keep-all;}
+.sub_wrap_parent.education-certification .draftSight-text ul li h4::before{position: absolute; content: '01'; display: block; width: 28px; height: 28px; line-height: 28px; top: 0%; left: 0; font-size: 15px; font-weight: 700; color: #fff; background-color: #000; border-radius: 100%;text-align: center; }
+.sub_wrap_parent.education-certification .draftSight-text ul li:nth-child(2) h4::before{content: '02'; }
+.sub_wrap_parent.education-certification .draftSight-text ul li:nth-child(3) h4::before{content: '03'; }
+.sub_wrap_parent.education-certification .draftSight-text ul li h4{font-size: 20px; line-height: 1.4; font-weight: bold;}
+.sub_wrap_parent.education-certification .draftSight-text ul li p.gray{font-size: 18px; color: #666666; line-height: 1.4; font-weight: 600;}
+
+.sub-wrap.exam-kboard{background-color:#f6f8fc;}
+
+
+/* 교육 > 인증시험 exam-kboard tab section */
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents{display: flex; justify-content: space-between;font-weight: 700; }
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents li {position: relative; border-top: 2px solid #7d8dac; padding: 20px 0;  border-bottom: 2px solid #000; background-color: #e0e5ef;  font-size: 18px; color: #7d8dac;}
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents li.modal_on{background-color: #f6f8fc; color: #000;  border-color: #000;}
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents li:first-child.modal_on{border-top: 2px solid #000; border-bottom: 0px;}
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents li:first-child.modal_on::after{position: absolute; top: 0; right: 0; content: ''; display: block; width: 2px; height: 100%; background-color: #000;}
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents li:last-child.modal_on{border-bottom: 0px solid #000;}
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents li:last-child.modal_on::after{position: absolute; top: 0; left: 0; content: ''; display: block; width: 2px; height: 100%; background-color: #000;}
+
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents li:first-child::before{position: absolute; top: 0; left: 0; content: ''; display: block; width: 2px; height: 100%; background-color: #7d8dac;}
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents li:first-child.modal_on::before{background-color: #000;}
+
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents li:last-child::before{position: absolute; top: 0; right: 0; content: ''; display: block; width: 2px; height: 100%; background-color: #7d8dac;}
+.sub-wrap.exam-kboard .exam-tab-inner ul.tab-parents li:last-child.modal_on::before{background-color: #000;}
+
+/* 인증시험 케이보드 */
+.sub-wrap.exam-kboard .exam-tab-inner .tip_contents{background: unset;}
+.sub-wrap.exam-kboard .tab-content{padding:0; background: unset;}
+
+/* 교육 > 인증시험 예제 미리보기  section*/
+.sub-wrap.exam{background-color:#fff; }
+.sub-wrap.exam .design-sub-title{margin-bottom: 20px;}
+.sub-wrap.exam  .exam-inner ul{display: flex; justify-content: space-between;}
+.sub-wrap.exam  .exam-inner ul li{display: flex; justify-content: flex-start; padding: 20px; box-sizing: border-box; width: 48.5%; box-shadow: 5px 2px 20px rgb(224,232, 240); border-radius: 20px;}
+.sub-wrap.exam  .exam-inner ul li .img{width:auto; margin-right: 25px; }
+.sub-wrap.exam  .exam-inner ul li .img img{display: block; width: 100%;}
+
+.sub-wrap.exam  .exam-inner .exam-text h2{color: #2883ff; font-weight: 600; margin: 5% 0;}
+.sub-wrap.exam  .exam-inner .exam-text p{margin-bottom: 5%; font-size: 20px;}
+.sub-page .sub-wrap.exam .exam-inner .btnB::after{content: "\e5cc";}
+/* end of 서브페이지 교육 > 인증시험 web size ------------------------------------------------------*/
+
+
+@media all and (max-width: 1024px) {
+
+/* 서브페이지 교육 > 인증시험 1024 start --------------------------------------------------------------- */
+.sub-page.pdt0{padding-top: 0px;}
+/* 교육 > 인증시험 draftSight section*/
+.sub_wrap_parent.education-certification .draftSight .sub_inner{width: 100%;}
+.sub_wrap_parent.education-certification .draftSight .draftSight-inner {align-items: unset;flex-direction: column;justify-content: space-between;}
+
+
+.sub_wrap_parent.education-certification .sub-wrap.draftSight{overflow: hidden;}
+.education-certification .draftSight-img{margin: 0 auto; width: 45%;}
+.education-certification .bg-color{position: relative; padding: 50px 0 10px; text-align: center;}
+.education-certification .bg-color::after{position: absolute; content: ''; display: block; width: 100%; height: 100%; left: 0%; top: 0;  background-color: #f8f8f8;}
+.education-certification .draftSight-text{width: 100%; position: relative; z-index: 1;}
+.education-certification .draftSight-text h2{position: relative; z-index: 1;}
+.education-certification .draftSight-text h3{position: relative; max-width: unset; font-size: 2.7vw; text-align: center; z-index: 1;}
+.education-certification .draftSight-text h3 > br{display: block;}
+
+.sub_wrap_parent.education-certification .draftSight-text ul{text-align: left; width: 90%; margin: 0 auto; margin-top: 50px;}
+
+
+.sub_wrap_parent.education-certification .draftSight-text ul li h4{font-size: 2.5vw; margin-bottom: 10px;}
+.sub_wrap_parent.education-certification .draftSight-text ul li h4::before{top: -2%; left: -0.5%; width: 3.5vw; height: 3.5vw; line-height: 3.5vw; font-size: 1.6vw;}
+.sub_wrap_parent.education-certification .draftSight-text ul li p.gray{font-size: 2.2vw;}
+
+/* 교육 > 인증시험 예제 미리보기  section*/
+.sub-wrap.exam  .exam-inner ul{flex-direction: column;}
+.sub-wrap.exam  .exam-inner ul li{width: 90%; margin: 0 auto 3%;}
+.sub-wrap.exam  .exam-inner ul li .img{width: 50%;max-width: 170px;margin-right: 5%;}
+.sub-wrap.exam  .exam-inner .exam-text h2{margin: 5% 0 2%; font-size: 1.7578vw;}
+.sub-wrap.exam  .exam-inner .exam-text p{font-weight: 700; font-size: 2.4414vw;}
+/* end of 서브페이지 교육 > 인증시험 1024 ------------------------------------------------------*/
+
+}
+
+@media all and (max-width: 640px) {
+/* 서브페이지 교육 > 인증시험 640 start --------------------------------------------------------------- */
+
+	
+/* 교육 > 인증시험 draftSight section*/
+.education-certification .bg-color{padding: 7.8125vw 0 1.5625vw;}
+.education-certification .draftSight-text h3{font-size: 3.6vw; margin: 3.5% auto 2%;}
+.sub_wrap_parent.education-certification .draftSight-text ul li {width: 90%;}
+.sub_wrap_parent.education-certification .draftSight-text ul li p.gray{font-size: 3.8vw;}
+.sub_wrap_parent.education-certification .draftSight-text ul li h4::before {width: 5vw; height: 5vw; line-height: 5vw; font-size: 2.7vw; top: 0;}
+.sub_wrap_parent.education-certification .draftSight-text ul li h4{font-size: 5.5vw; }
+.sub_wrap_parent.education-certification .draftSight-text ul{margin-top: 10%;}
+.sub-wrap.exam-kboard .exam-tab-inner ul li {font-size: 2.8125vw;}
+.sub-wrap.exam  .exam-inner ul li{padding: 3%;}
+.sub-wrap.exam  .exam-inner ul li .img{width: 42%;max-width: 120px;margin-right: 5%;}
+.red-expert .customer-con4 .product-txt{font-size: 2.4vw;}
+    /* 교육 > 인증시험 예제 미리보기  section*/
+.sub-page .sub-wrap.exam .exam-inner .btnB{width: 19.5313vw;line-height: 2.5;}
+    /* end of 서브페이지 교육 > 인증시험 640 ------------------------------------------------------*/
+
+}
+
+
+
+@media all and (max-width: 480px) {
+    /* 서브페이지 교육 > 인증시험 480 start --------------------------------------------------------------- */
+/* 교육 > 인증시험 draftSight section*/
+.sub_wrap_parent.education-certification .draftSight-text ul li p.gray{font-size: 3.2vw;}
+.sub_wrap_parent.education-certification .draftSight-text ul li{padding-left: 30px; margin-bottom: 4.1667vw;}
+.sub_wrap_parent.education-certification .draftSight-text ul li h4::before{width: 22px; height: 22px; line-height: 22px;}
+    /* end of 서브페이지 교육 > 인증시험 480 ------------------------------------------------------*/
+
+}
+ 	
+
+@media all and (max-width: 400px) {
+
+/* 서브페이지 교육 > 인증시험 400 start --------------------------------------------------------------- */
+/* 교육 > 인증시험 draftSight section*/
+.sub_wrap_parent.education-certification .draftSight-text ul li h4{font-size: 4.5000vw;}
+.sub_wrap_parent.education-certification .draftSight-text ul li p.gray{font-size: 3.5000vw;}
+    /* end of 서브페이지 교육 > 인증시험 400 ------------------------------------------------------*/
+
+
+}

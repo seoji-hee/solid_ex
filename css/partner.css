@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+/* 서브페이지 지원 > 공식파트너사 web size start --------------------------------------------------------------- */
+/* 검색 section*/
+
+.partnerForm table{ position: relative; width: 100%; }
+.partnerForm table tr{border: 1px solid #bac0cb; font-size: 16px; text-align: center;}
+.partnerForm table th{ padding: 25px 0;background-color: #f8fbff; font-size: 18px; }
+/* .partnerForm table td{ border: 1px solid #ccc; } */
+
+.sub_wrap_parent.support-partner input{outline: none; appearance: none;  cursor: pointer; }
+.sub_wrap_parent.support-partner input[type="checkbox"]{display: inline-block; vertical-align: middle; width: 18px; height: 18px; background-color: #fff;border-radius: 5px;border: 1px solid #2883ff; }
+.sub_wrap_parent.support-partner table label{display: inline-block; vertical-align: middle; margin-left: 2%;}
+.sub_wrap_parent.support-partner input[type="checkbox"]:checked{background-color: #2883ff;}
+
+.sub_wrap_parent.support-partner input[type="submit"]{display: none;}
+.sub_wrap_parent.support-partner input[type="reset"]{display: none;}
+
+.sub_wrap_parent.support-partner .partnerForm .btn_po{position: relative; text-align: right; margin-top: 30px;}
+.sub_wrap_parent.support-partner .btnB::after{content:"\e5cc";}
+.sub_wrap_parent.support-partner .partnerForm .btn_po > label{display: inline-block; margin-left: 2%; cursor: pointer;}
+.sub_wrap_parent.support-partner input[type="reset"]+ label{background-color: #000; border: 1px solid #000;}
+.sub_wrap_parent.support-partner input[type="reset"]+ label.btnB:hover{border:1px solid #000; color: #000; background-color: #fff;}
+.sub_wrap_parent.support-partner input[type="reset"]+ label.btnB:hover::after{color: #000;}
+
+/* 파트너사 */
+.sub-wrap.partners .partners-list{position: relative; display: grid; grid-template-columns: 1fr 1fr 1fr; justify-content: space-between; grid-gap: 70px 40px;
+display: -ms-grid; display: -moz-grid; -ms-grid-columns: 1fr 1fr 1fr;}
+.sub-wrap.partners .partners-list > li{position: relative; width: 100%; border-radius: 20px; overflow: hidden; border: 1px solid #dbe4f1; background-color: #fafafa; max-height: 400px; box-shadow: 5px 5px 20px #eef3f7;}
+.sub-wrap.partners .partners-list li img{ display: block; width: 100%;}
+.sub-wrap.partners .partner-title {padding: 30px 20px 20px; border-top: 1px solid #d9e3f0;}
+.partner-title .btn_po{margin-top: 10px;}
+.partner-title > .btn_po .btnB::after{content: "\f1e1";}
+.sub-wrap.partners .partner-title h2{font-size: 20px; margin-bottom: 15px; font-weight: 600; color: #000;}
+.sub-wrap.partners .partner-title p{font-size: 16px; color: #8b8b8b; line-height: 1.3; overflow: hidden;white-space:nowrap; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient:vertical;}
+
+/* 지원 > 공식파트너사 팝업 */
+.sub-wrap.partners  .modal-p{display: none;  position: fixed; z-index: 3; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgb(0,0, 0 ,0.8); overflow: auto;}
+.sub-wrap.partners .pop-contents-parents{ padding: 30px 25px; position: absolute; width: 70%; max-width: 720px; z-index: 3;  top: 15%; left: 50%; transform: translate(-50% , 0%);overflow: auto; background-color: #fff; border-radius: 30px;}
+.sub-wrap.partners .pop-contents-parents .cl {display: block; position: absolute;top: -10px; right: 0px; color: transparent; text-indent: -9999px; width: 100px; height: 100px; background: url(https://www.go-cloud-fans.com/img/sub_web_close.png) no-repeat 50%; z-index: 3; }
+
+.pop-contents-parents h1{font-size: 32px; margin-bottom: 15px; font-weight: bold; color: #2e79ec;}
+.pop-contents-parents .child-partner-info {position: relative; word-break: keep-all; display: flex; justify-content: flex-start; padding: 25px 0 25px;  border-top: 2px solid #2e79ec; border-bottom: 2px solid #2e79ec;}
+.pop-contents-parents .child-partner-info .img{position: relative;}
+.sub-wrap.partners .pop-contents-parents .child-partner-info .img img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 98%;}
+.pop-contents-parents .child-partner-info > p{width: 95%; line-height: 1.4; font-size: 14px; word-break: keep-all;}
+.pop-contents-parents .child-partner-text > li{display: flex; justify-content: flex-start; border-bottom: 1px solid #b2b2b2;}
+
+/* 지원 > 공식파트너사 팝업 - 공통 레이아웃 */
+.child-partner-info > .img , .child-partner-text li > .partner-icon{flex: 1;}
+.child-partner-info > .p-box {position: relative;}
+.child-partner-info > .p-box ,.child-partner-text li > .detail-info{flex: 4; padding-left: 4%; }
+
+/* 지원 > 공식파트너사 팝업 첫번째 */
+.pop-contents-parents .child-partner-info > .p-box p{line-height: 1.3; font-size: 16px; word-break: keep-all;}
+.pop-contents-parents .child-partner-info .btn_po{width: 100%;  margin-top: 15px; }
+.pop-contents-parents .child-partner-info .btn_po a{display: inline-block; margin: 0 auto; text-align: center; width: 160px; line-height: 2.8; font-size: 16px;}
+.pop-contents-parents .child-partner-info .btn_po .btnA::before{	position: absolute;	top:50%; left: 5%; display:block; width: 30px; height: 30px; content: ""; background: url(https://www.go-cloud-fans.com/img/p_home.png) no-repeat 50%; transform: translate(-10%, -55%);}
+/* 지원 > 공식파트너사 팝업 두번재 */
+.pop-contents-parents .child-partner-text {border-bottom: 1px solid #2e79ec;}
+
+.child-partner-text > li:nth-child(2) .detail-info-depth li > p{font-size: 16px; color: #666666;}
+.child-partner-text li .detail-info {padding-top: 30px; padding-bottom: 30px; }  
+/* .child-partner-text li:first-child .partner-icon , .child-partner-text li:last-child .partner-icon{padding-bottom: 30px;} */
+.child-partner-text li > .partner-icon{position: relative; background-color: #f7f7f7; font-size: 16px; text-align: center;}
+.child-partner-text li > .partner-icon .icon_po{position: absolute; width: 100%;  top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.child-partner-text li > .partner-icon .icon_po i{display: block; margin: 0 auto; margin-bottom: 11%; width: 45px; height: 45px; background: url(https://www.go-cloud-fans.com/img/partner_icon01.png) no-repeat 50%; background-size: contain;}
+
+.child-partner-text li:nth-child(2) .icon_po  i{background-image: url(https://www.go-cloud-fans.com/img/partner_icon02.png);}
+.child-partner-text li:nth-child(3) .icon_po i{background-image: url(https://www.go-cloud-fans.com/img/partner_icon03.png);}
+
+.child-partner-text li > .detail-info > h3{font-size: 16px; margin-bottom: 10px;}
+.child-partner-text li > .detail-info > h3 b{font-weight: bold;}
+.child-partner-text li > .detail-info span {color: #666666; font-size: 16px; line-height: 1.2;}
+.child-partner-text li > .detail-info .p{color: #666666; font-size: 14px; }
+
+.detail-info-depth h3{position: relative; padding-left: 10px; font-size: 16px;}
+.detail-info-depth h3::before{position: absolute; top: 20%; left: 0; width: 5px; height: 5px; background-color:#2e79ec; content: ''; display: block; border-radius: 100%;}
+.detail-info-depth .line-1 h3::before{top: 40%;transform: translate(0%, -50%);}
+.child-partner-text li:first-child .detail-info-depth li{margin-bottom: 10px; word-break: keep-all;}
+.child-partner-text li:nth-child(1n+2) .detail-info-depth li {display: inline-block; width: 49%; margin-bottom: 10px;}
+
+
+
+
+
+/* 지원 > 공식파트너사 팝업 개별 style*/
+/* 회사위치 */
+.partners-list .child-partner-text li:last-child .detail-info  li.wd100{width: 100%;}
+.pop07 .pop-contents-parents .child-partner-info .img img{max-width: 90px;}
+
+.pop02 .pop-contents-parents .child-partner-info .img img ,
+.pop08 .pop-contents-parents .child-partner-info .img img , 
+.pop10 .pop-contents-parents .child-partner-info .img img{max-width: 120px;}
+
+.pop07 .child-partner-text li:first-child .detail-info-depth ,
+.pop07 .child-partner-text li:first-child .detail-info-depth, 
+.pop09 .child-partner-text li:first-child .detail-info-depth , 
+.pop10 .child-partner-text li:first-child .detail-info-depth ,
+.pop12 .child-partner-text li:first-child .detail-info-depth{margin-top: 3%;}
+
+/* 판매솔루션 */
+.partners-list .detail-info li.wd100 h3{margin-bottom: 2%;}
+.pop09 .detail-info-depth li.line-1 h3{line-height: 2;}
+.partners-list .detail-info li h3.line-1{line-height: 1.4;}
+.partners-list li.pop04 .detail-info .detail-info-depth li.wd100 span , 
+.partners-list li.pop09 .detail-info .detail-info-depth li.wd100 span , 
+.partners-list li.pop10 .detail-info .detail-info-depth li.wd100 span{line-height: 1.5;}
+.pop11 .child-partner-text li:last-child .detail-info-depth li{width: 100%;}
+/* end of 서브페이지 지원 > 공식파트너사 web size ------------------------------------------------------*/
+
+
+@media all and (max-width: 1024px) {
+
+/* 서브페이지 지원 > 공식파트너사 1024 start------------------------------------------------------*/
+.partnerForm table th{font-size: 20px;}
+.sub_wrap_parent.support-partner table label{font-size: 18px;}
+.sub_wrap_parent.support-partner .btn_po{text-align: center;}
+/* 지원 > 공식파트너사 검색 폼 */
+.partnerForm table col:last-child{width: 0.1%; background-color: gold;}
+
+.sub-wrap.partners .partners-list{grid-template-columns: 1fr 1fr; grid-gap: 6.8359vw 6.8359vw;}
+.sub-wrap.partners .partners-list > li{max-height: unset;}
+.sub-wrap.partners .partner-title h2{font-size: 18px; margin-bottom: 20px;}
+.sub-wrap.partners .partner-title p{font-size: 18px;}
+.child-partner-text li > .partner-icon{font-size: 18px;}
+.sub_wrap_parent.support-partner .partnerForm .btn_po{text-align: center; cursor: pointer;}
+
+/* 지원 > 공식파트너사 팝업 */
+.sub-wrap.partners .pop-contents-parents{width: 90%; box-sizing: border-box; top: 13%; }     
+.sub-wrap.partners .pop-contents-parents h1{font-size: 3.1250vw; margin-bottom: 3%;}
+.sub-wrap.partners .pop-contents-parents .cl{width: 80px; height: 80px; top: 0%; }
+.sub-wrap.partners .child-partner-info p{font-size: 18px; word-break: keep-all; flex: unset; padding-left:0; }
+/* 첫번째 */
+.sub-wrap.partners .child-partner-info{flex-direction: column;}
+.sub-wrap.partners .child-partner-info .img{flex: unset;}
+.sub-wrap.partners .pop-contents-parents .child-partner-info .img img{position: relative; top: unset; left: unset; transform: unset; width: 80%; max-width: 350px; margin: 0 auto;}
+.detail-info-depth h3{font-size: 18px;}
+.child-partner-text li > .detail-info > h3{font-size: 18px;}
+
+.child-partner-text > li:nth-child(2) .detail-info-depth li > p{font-size: 18px; }
+/* 회사 주소 */
+.child-partner-text li:nth-child(1n+2) .detail-info-depth li {display: block;width: 100%;}
+
+/* 개별팝업 */
+.pop07 .pop-contents-parents .child-partner-info .img img{max-width: 350px;}
+.pop02 .pop-contents-parents .child-partner-info .img img ,
+.pop08 .pop-contents-parents .child-partner-info .img img , 
+.pop10 .pop-contents-parents .child-partner-info .img img{max-width: 350px;}  
+/* end of 서브페이지 지원 > 공식파트너사 1024 size ------------------------------------------------------*/
+
+}
+
+
+@media all and (max-width: 640px) {
+/* 서브페이지 지원 > 공식파트너사 640 start------------------------------------------------------*/
+.partnerForm table tr{ font-size: 2.5000vw; }
+.partnerForm table th{font-size: 16px; padding: 4% 0;}
+.sub_wrap_parent.support-partner input[type="checkbox"]{width: 2.8125vw;height: 2.8125vw;}
+.sub_wrap_parent.support-partner table label{font-size: 14px;}
+.sub_wrap_parent.support-partner .btn_po{margin-top: 20px;}
+
+.sub-wrap.partners .partners-list{grid-gap: 3.1250vw 3.1250vw;}
+.sub-wrap.partners .partner-title {padding: 4.0313vw 3.1250vw 2.4688vw;}
+.sub-wrap.partners .partner-title .btn_po{margin-top: 7%;}
+.sub-wrap.partners .partner-title h2{font-size: 21px; margin-bottom: 15px;}
+/* 팝업 */
+.sub-wrap.partners .pop-contents-parents{padding: 6% 4.5%;} 
+.sub-wrap.partners .pop-contents-parents h1{font-size: 4.3750vw;}
+.sub-wrap.partners .pop-contents-parents .cl{width: 4.6875vw; height: 4.6875vw; top: 2%; right: 5%; }
+.sub-wrap.partners .child-partner-info{padding: 5% 0;} 
+.sub-wrap.partners .child-partner-info p{font-size: 2.5000vw;}
+.pop-contents-parents .child-partner-info .btn_po a{width: 140px; font-size: 14px; line-height: 2.6;}
+/* 두번째 */
+.detail-info-depth h3{font-size: 2.5000vw;}
+.child-partner-text li .detail-info {padding-top: 4.6875vw;padding-bottom: 4.6875vw;}  
+.child-partner-text li > .partner-icon .icon_po i{width: 7.0313vw; height: 7.0313vw;}
+.child-partner-text li > .partner-icon{font-size: 2.1875vw; word-break: keep-all;}
+
+/*  end of 서브페이지 지원 > 공식파트너사 640 size  ----------------------------------------------------*/
+}
+
+
+
+@media all and (max-width: 480px) {
+/* 서브페이지 지원 > 공식파트너사 480 start------------------------------------------------------*/
+.sub-wrap.partners .partner-title h2{ font-size: 4.2500vw; margin-bottom: 10px;}
+.sub-wrap.partners .partner-title p{font-size: 16px;}
+.sub-page .sub-wrap .partner-inner .partner-title .btnB {width: 25.875vw; min-width: 100px; font-size: 3.3333vw; line-height: 2.5;}
+.child-partner-text li > .partner-icon{font-size: 15px; }
+
+.sub-wrap.partners .pop-contents-parents .child-partner-info .img img{max-width: 250px; width: 100%;  }
+.sub-wrap.partners .child-partner-info p{font-size: 14px;}
+.detail-info-depth h3 , .child-partner-text li > .detail-info span {font-size: 14px;}
+.child-partner-text li > .detail-info > h3{font-size: 14px;}
+.child-partner-text > li:nth-child(2) .detail-info-depth li > p{font-size: 14px;}
+/* end of 서브페이지 지원 > 공식파트너사 480 --------------------------------*/
+
+}
+ 

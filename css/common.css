@@ -1,0 +1,204 @@
+html{font-size: 16px;}
+body,
+#wrap {
+	font-size: 1rem;
+	color: #000;
+	font-family: "3ds", "NotoSansCJKkr", sans-serif !important;
+	position: relative;
+	width: 100%;
+}
+#container{padding-top:70px;}
+
+/* 메인 공통 스타일*/
+
+.swiper {
+	position: relative;
+}
+
+.swiper .slideBtn {
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+}
+
+.slideBtn .swiper-button-next::after,
+.slideBtn .swiper-button-prev::after {
+	display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	z-index: 15;
+	outline: none;
+}
+
+.slideBtn .swiper-button-next span,
+.slideBtn .swiper-button-prev span {
+	color: #000;
+	font-size: 32px;
+	position: relative;
+	z-index: 20;
+	outline: none;
+}
+
+.slideBtn::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	width: 1px;
+	height: 25px;
+	background-color: #ccc;
+	transform: translateY(-50%);
+}
+
+.red {
+	color: #d13029;
+	font-family: "3dsSemiBold", sans-serif !important;
+}
+
+.blue {
+	color: #004877;
+	font-family: "3dsSemiBold", sans-serif !important;
+}
+.blue b{
+	font-family: "3dsBold", sans-serif !important;
+}
+
+.sky {
+	color: #2883ff;
+	font-family: "Noto Sans KR", '3ds', sans-serif !important;
+	font-weight: 700;
+}
+
+
+.title {
+	text-align: center;
+	padding: 7% 0 4% 0;
+}
+
+.title p {
+	font-family: "Noto Sans KR", sans-serif !important;
+	font-weight:600;
+	font-size: 38px;
+	line-height: 1.3;
+}
+
+span b {
+	font-family: "3dsSemiBold", sans-serif !important;
+}
+
+.btn {
+    box-shadow: 3px 3px 10px rgb(40 131 255 / 60%);
+    width: 200px;
+    background: #2883ff;
+    color: #fff !important;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 18px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+
+.btn::after {
+	content: "\e5cc";
+	font-family: "Material Icons";
+	color: #fff;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+}
+
+a:visited{color:inherit;}
+
+
+/* 서브페이지  공통 */
+.container{width: 100%;}
+.sub_inner{width: 1200px; margin: 0 auto; position: relative;}
+.sub-page{width: 100%; padding: 80px 0;}
+
+.sub-banner{width: 100%;}
+.sub-bg{width: 100%; position: relative;}
+.sub-bg img{width: 100%; display: block;}
+.sub-bg .m{display: none !important;}
+.sub_banners_title{position: absolute; top:50%; transform: translateY(-50%); width: 100%; text-align: center; color: #fff;}
+.sub_banners_title h1{font-family: '3dsSemiBold',sans-serif !important; font-size: 55px; font-weight: 800; text-shadow: 5px 2px 15px rgb(0, 0, 0, 0.7);}
+.sub_banners_title h2{font-family:'NotoSansCJKkr', '3ds',sans-serif !important; font-size: 22px; margin-top: 20px; line-height: 1.2; text-shadow: 5px -5px 14px rgb(0, 0, 0, 0.9);}
+
+.sub_direction{width: 100%; background-color: #2883ff; color: #fff; position: relative;}
+.sub_direction ul{ display: flex; justify-content: first baseline; height: 50px;}
+.sub_direction ul li{box-sizing: border-box; font-size: 18px; line-height: 50px; padding: 0 20px; font-family:'NotoSansCJKkr','3dsSemiBold',sans-serif !important;}
+
+.sub_direction ul li:nth-child(1){width: 50px; text-indent: -9999px; padding: 0 10px; border-left: 1px solid #a4b0b8;border-right: 1px solid #a4b0b8;}
+.sub_direction ul li:nth-child(2){width: 150px;border-right: 1px solid #a4b0b8;}
+.sub_direction ul li:nth-child(3){width: 250px;border-right: 1px solid #a4b0b8;}
+.sub_direction ul li a i{display: block; width: 100%; height: 100%; margin: 0 auto; background: url('https://www.go-cloud-fans.com/img/home.png') no-repeat 50%; background-size: contain;}
+
+
+.btnA{width: 180px; box-sizing: border-box; display: block; text-align: center; line-height: 3; border-radius: 30px;border: 1px solid #2883ff; background-color: #2883ff; color:#fff; position: relative; font-size: 18px;}
+.btnA::after{content: "\e5cc"; font-family: "Material Icons"; color: #fff;	position: absolute;	top:55%; right: 5%;	font-size: 25px; transform: translate(-10%, -55%);}
+.btnA:hover{border:1px solid #2883ff; color:#2883ff; background-color: #fff;}
+.btnA:hover::after{color:#2883ff;}
+
+.btnA--white{border:1px solid #2883ff; background-color: #fff; color:#2883ff; font-size: 18px;}
+.btnA--white::after{color:#2883ff;}
+.btnA--white:hover{background-color: #2883ff; color:#fff;}
+.btnA--white:hover::after{color:#fff;}
+
+.btnB{width: 125px; box-sizing: border-box; display: block; text-align: center; line-height: 3; border-radius: 30px; background-color: #2883ff;border: 1px solid #2883ff; color:#fff; position: relative; font-size: 14px;}
+.btnB::after{content: "\f1e1"; font-family: "Material Icons"; color: #fff;	position: absolute;	top:55%; right: 5%;	font-size: 16px; transform: translate(-10%, -55%);}
+/* .btnB:hover{border:1px solid #2883ff; background-color: #fff; color:#2883ff;}
+.btnB:hover::after{color:#2883ff;} */
+
+.btnC{width: 180px; background-color: #2883ff; color: #fff !important; display: flex; padding: 18px 0; text-align: center; box-sizing: border-box; box-shadow: 3px 3px 10px rgb(40 131 255 / 60%); font-size: 18px; border-radius: 30px; justify-content: center; align-items: center; padding-left: 15px;}
+.btnC::after{content: "\e5cc"; font-family: "Material Icons"; color: #fff;font-size: 25px; display: inline-flex;}
+
+.btnE{width: 150px; background-color: #2883ff; color: #fff; text-align: center; display: flex; justify-content: center; align-items: center; height: 45px; border-radius: 30px; box-sizing: border-box; padding-left: 16px;}
+.btnE::after{content: "\f1e1"; font-family: "Material Icons"; color: #fff;font-size: 17px; display: inline-flex;}
+
+.sub_title{text-align: center; padding-bottom: 2%;font-size: 40px; font-family: 'NotoSansCJKkr', '3ds', sans-serif !important; font-weight: 400; line-height: 1;}
+.sub_title b{font-weight: 600;}
+
+@media all and (max-width:1200px) {
+	.sub_inner{width: 90%;}
+
+}
+
+@media all and (max-width: 1024px){
+	.sub-bg .m{display: block !important;}
+	.sub-bg .p{display: none !important;}
+
+	.sub-page{padding: 7.8125vw 0;}
+
+	.btnC{width: 160px; padding: 15px 0; font-size: 16px;}
+	.btnC::after{font-size: 16px;}
+
+	.sub_title{font-size: 5vw; padding-bottom: 5%;}
+
+
+}
+
+@media all and (max-width:640px) {
+	.sub-banner  .sub_banners_title h1{font-size: 8.5938vw;}
+	.sub-banner  .sub_banners_title h2{ font-size: 3.4375vw; margin-top: 2.3438vw;}
+
+	.btnC{width: 29vw; font-size: 3vw; padding: 11px 0;}
+	.btnC::after{font-size: 3vw;}
+
+	.sub_title{font-size: 6vw;}
+
+	.btn {
+		width: 180px;
+		font-size: 16px;
+		height: 50px;
+	}
+}
