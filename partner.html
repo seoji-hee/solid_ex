@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solidworks 지원(공식 파트너)페이지</title>
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+  />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/product_design.css">
+    <link rel="stylesheet" href="./css/education.css">
+    <link rel="stylesheet" href="./css/partner.css">
+ 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="./js/basic_sub.js"></script>
+</head>
+<body>
+
+<!-- wordpress 01  -->
+<div class="container">
+    <section class="sub-banner">
+        <div class="sub-bg">
+            <img src="https://www.go-cloud-fans.com/img/partner_mainBg.jpg" alt="dd" class="p">
+            <img src="https://www.go-cloud-fans.com/img/m_maket_bg.jpg" alt="dd" class="m">
+            <div class="sub_banners_title">
+                <h1>공식 파트너사</h1>
+                <h2>솔리드웍스의 파트너를 만나보세요.</h2>                
+            </div>
+        </div>
+    </section>
+
+<style>
+    ul.partners-list > li {
+        display: none;
+    }
+    ul.partners-list > li.conV.useV {
+        display: block;
+    }
+</style>
+<script>
+    $(function(){
+        //검색실행 
+        var searchsubmit=function(){
+            var conV=$('input[name="purpose"]:checked').val();
+            var useV=$('input[name="area"]:checked').val();
+            $('ul.partners-list>li').removeClass('conV useV');
+            $('ul.partners-list>li[condata*="'+conV+'"]').addClass('conV');
+            $('ul.partners-list>li[condata*="'+useV+'"]').addClass('useV');
+        }
+        //검색조건체크
+        $('.searchForm-inner input[type="checkbox"]').on('click',function(){
+            var v=$(this).val();
+            $(this).closest('tr').find('input').prop('checked',false);
+            $('input[type="checkbox"][value="'+v+'"]').prop('checked',true);
+        });
+        //검색
+        $('#partner-submit').on('click',function(){
+            searchsubmit();
+        });
+        //검색초기화
+        $('#partner-reset').on('click',function(){
+            $('.searchForm-inner input[type="checkbox"]').prop('checked',false);
+            $('input[type="checkbox"][value="purposeAll"]').prop('checked',true);
+            $('input[type="checkbox"][value="areaAll"]').prop('checked',true);
+            searchsubmit();
+        });
+    });
+</script>
+
+<!-- wordpress 02  -->
+<section class="sub-page pdb0">
+    
+<div class="sub_wrap_parent support-partner">
+
+    <!-- 검색창 시작 -->
+    <div class="partnerForm">
+        <div class="sub_inner searchForm-inner">
+            <!-- <form action="" method="get"> -->
+                <table>
+                    <colgroup>
+                        <col width="18%;">
+                        <col width=";">
+                        <col width=";">
+                        <col width=";">
+                        <col width=";">
+                        <col width=";">
+                        <col width="20%;">
+
+                        </colgroup>
+
+                        <tbody><tr>
+                            <th>용도</th>
+                            <td><input type="checkbox" name="purpose" value="purposeAll" id="purposeAll" checked=""><label for="purposeAll">전체</label></td>
+                            <td><input type="checkbox" name="purpose" value="company" id="company"><label for="company">기업용</label></td>
+                            <td><input type="checkbox" name="purpose" value="education" id="education"><label for="education">교육용<label< td="">
+                            </label<></label></td><td colspan="3"></td>
+                            <!-- <td>-</td>
+                            <td>-</td> -->
+                        </tr>
+                        <tr>
+                            <th>지역</th>
+                            <td><input type="checkbox" name="area" value="areaAll" id="areaAll" checked=""><label for="areaAll">전체</label></td>
+                            <td><input type="checkbox" name="area" value="capital_area" id="capital_area"><label for="capital_area">수도권</label></td>
+                            <td><input type="checkbox" name="area" value="daejeon" id="daejeon"><label for="daejeon">대전</label></td>
+                            <td><input type="checkbox" name="area" value="busan" id="busan"><label for="busan">부산/창원</label></td>
+                            <td><input type="checkbox" name="area" value="daegu" id="daegu"><label for="daegu">대구</label></td>
+                            <td></td>
+                        </tr>
+                </tbody></table>
+                <div class="btn_po">      
+                      <!-- 검색과 초기화 버튼 css style 위해 display none 과 label에 스타일 붙여 놓았는데,
+                         개발시 편하게 수정하셔도 됩니다~  -->
+                    <input type="submit" name="partner-submit" id="partner-submit"> 
+                    <label for="partner-submit" class="btnB">검색</label>
+
+                    <input type="reset" name="partner-reset" id="partner-reset">
+                    <label for="partner-reset" class="btnB">조건 초기화</label>
+                </div>
+
+            <!-- </form> -->
+        </div>
+    </div>
+    <!-- 검색창 끝 -->
+
+
+
+
+
+<!--wordpress 03 : 파트너사 팝업 -->
+    <div class="sub-wrap partners">       
+        <div class="sub_inner partner-inner">
+            
+
+        <ul class="partners-list">
+            <li class="pop01 conV useV" condata="purposeAll areaAll company capital_area daejeon busan daegu">
+                <div class="partnersPop">
+                    <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner01.png" alt=""> </div>
+                    <div class="partner-title">
+                        <h2>노드데이타</h2>
+                            <p>노드데이타는 3DEXPERIENCE Works 및 <br class="sub_m">
+                                솔리드웍스 전 제품을 공급 및 기술 지원하는 <br class="sub_m">
+                                국내 최대의 다쏘시스템 공식 파트너사입니다.</p>   
+                        <div class="btn_po">                                  
+                            <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+                        </div>                     
+                    </div>
+                </div>
+                    <!-- 팝업영역 -->
+                    <div class="modal-p">
+                        
+                        <ul class="pop-contents-parents">
+                            <li><span class="cl">닫기버튼</span></li>
+                            <li>
+                                <h1>노드데이타</h1>
+                                <div class="child-partner-info">                              
+                                    <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner01.png" alt="노드데이타"></div>
+                                    <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner01.png" alt="노드데이타"></div>
+                                    <div class="p-box">
+                                        <p>노드데이타는 3DEXPERIENCE Works 및 솔리드웍스 전 제품을 공급 및 기술 지원하는 국내 최대의 다쏘시스템 공식 파트너사입니다.
+                                            서울본사, 중부지사, 영남지사, 창원지사의 각 지역별 전문 교육장 및 상주 엔지니어를 통해 솔리드웍스 전제품 맞춤 교육과 실시간 기술 지원 서비스를 제공하고 있습니다. 
+                                            노드데이타는 2004년부터 쌓아온 노하우와 새로운 가치를 제공하여 고객과 함께 성장하고 있습니다.</p>
+                                        <div class="btn_po">
+                                            <a href="http://www.nodedata.com/" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+                            <ul class="child-partner-text">
+                                <li>
+                                    <div class="partner-icon">  
+                                        <div class="icon_po">                                       
+                                            <i></i>회사주소    
+                                        </div>                                    
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">
+                                            <li><h3>서울본사 :  <span>서울 금천구 가산디지털1로 128 1811호 08507 (02-595-4450)</span></h3>
+                                            </li>
+                                            <li><h3>중부지사 :  <span>대전광역시 유성구 온천북로 33번길 22-4 202호 34185 (042-719-4450)</span></h3>
+                                            </li>
+                                            <li><h3>영남지사 :  <span>부산광역시 금정구 중앙대로 1815 702호 46273 (051-517-4450)</span></h3>
+                                            </li>
+                                            <li><h3>창원지사 :  <span>경상남도 창원시 성산구 중앙대로 105, STX Ocean Tower 18층 51515 <br class="p">(070-4376-0162)</span></h3>
+                                            </li>
+                                        </ul>                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po"> 
+                                             <i></i>엔지니어 구성
+                                        </div> 
+                                    </div>
+                                    <div class="detail-info">
+                                       <h3><b>엔지니어 개발 인력 총 인원 (16명)</b></h3>
+                                        <ul class="detail-info-depth">
+                                            <li><p> - CAD 설계 / 전자기장 설계 (10명 / 1명)</p></li>
+<li><p>- 시뮬레이션 (3명)</p></li>                                         
+                                            <li><p>- 데이터 관리 및 협업 (2명)</p></li>                                           
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po">
+                                             <i></i>판매 솔루션
+                                         </div>  
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">
+                                            <li><h3>SOLIDWORKS 3D CAD</h3> </li>
+                                            <li><h3>SOLIDWORKS Simulation</h3> </li>
+                                            <li><h3>SOLIDWORKS Flow Simulation</h3> </li>
+                                            <li><h3>SOLIDWORKS Plastics</h3> </li>
+                                            <li><h3>SOLIDWORKS PDM</h3> </li>
+                                            <li><h3>SOLIDWORKS Manage</h3> </li>
+
+                                            <li><h3>SOLIDWORKS Composer</h3> </li>
+                                            <li><h3>SOLIDWORKS Visualize</h3> </li>
+                                            <li><h3>SOLIDWORKS MBD</h3> </li>
+                                            <li><h3>SOLIDWORKS Electrical</h3> </li>
+                                            <li><h3>eDrawings</h3> </li>
+                                        
+                                            <li><h3>EXALEAD OnePart</h3> </li>
+                                            <li><h3>Draftsight Enterprise</h3> </li>
+                                            <li><h3>XFlow</h3> </li>
+
+                                            <li><h3>ABAQUS</h3> </li>
+                                            <li><h3>CST STUDIO SUITE</h3> </li>
+
+                                        </ul>                                                                           
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                        
+                    </div>
+                    <!-- 팝업 끝 -->
+               
+            </li>
+
+            <!--wordpress 08 : 파트너사 팝업 (메이븐) -->
+            <li class="pop06 conV useV" condata="purposeAll areaAll company capital_area daejeon busan">
+                <div class="partnersPop">
+                    <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner06.png" alt="메이븐"> </div>
+                    <div class="partner-title">
+                        <h2>메이븐</h2>
+                        <p>메이븐은 솔리드웍스 전제품과 시뮬리아 전 제품, <br class="sub_m">
+                            그리고 클라우드 기반의 통합 설계 플랫폼인 <br class="sub_m">
+                            3DEXPERIENCE Works를 공급하는 국내 공식 ...
+                        </p>
+                        <div class="btn_po">                                  
+                            <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+                        </div> 
+                    </div>
+                </div>
+                    <!-- 팝업영역 -->
+                    <div class="modal-p">
+                       
+                        <ul class="pop-contents-parents">
+                            <li><span class="cl">닫기버튼</span></li>
+                            <li>
+                                <h1>메이븐</h1>
+                                <div class="child-partner-info">
+                                    <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner06.png" alt="메이븐"></div>
+                                    <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner06.png" alt="메이븐"></div>   
+                                    <div class="p-box">
+                                        <p>메이븐은 솔리드웍스 전제품과 시뮬리아 전 제품, 그리고 클라우드 기반의 통합 설계 플랫폼인 
+                                            3DEXPERIENCE Works를 공급하는 국내 공식 파트너사입니다. 가입자 1만 명이 넘는 
+                                            온·오프라인 통합 기술·교육센터를 통해 고객들이 현업에 빠르게 적용할 수 있도록 지원하고 
+                                            있으며, 교육 서비스도 함께 제공하고 있습니다. 다양한 제품 서비스로 국내 10만 제조 기업의 
+                                            제품 설계자분들에게 최적의 서비스를 제공하고 있습니다. 
+                                        </p>
+                                        <div class="btn_po">
+                                            <a href="https://www.swmaven.co.kr/2020/index.html?" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <ul class="child-partner-text">
+                                <li>
+                                    <div class="partner-icon"> 
+                                        <div class="icon_po">                                        
+                                        <i></i>회사주소</div>                                         
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">
+                                            <li><h3>본사 : <span>경기도 성남시 수정구 창업로 42 판교제2테크노밸리 경기기업성장센터 509호 13449 <br class="p">(02-852-2555)</span></h3></li> 
+                                            <li><h3>대전지사 :  <span>대전광역시 유성구 테크노4로 17 대덕비즈센터 D동 610호 34013 (042-822-2558)</span></h3></li> 
+                                            <li><h3>부산지사 :  <span>부산광역시 북구 백양대로 1163 7층 707호 (070-4258-5063)</span></h3></li> 
+                                        </ul>                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po">
+                                        <i></i>엔지니어 구성</div>  
+                                    </div>
+                                    <div class="detail-info">
+                                    <h3><b>엔지니어 개발 인력 총 인원 (10명)</b></h3>
+                                        <ul class="detail-info-depth">
+                                            <li><p>- CAD 설계 / 전자기장 설계 (4명 / 1명)</p></li>  
+                                            <li><p>- 시뮬레이션 (3명)</p></li>     
+                                            <li><p>- 데이터 관리 및 협업 (2명)</p></li>                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po">  
+                                        <i></i>판매 솔루션</div>
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">                            
+                                            <li class="wd100"><h3 class="line-1"> Desktop Portfolio: 2022년 1월 기준 판매 가능 제품 리스트 </h3> <span>(1) 솔리드웍스 전제품<br>SOLIDWORKS, SOLIDWORKS Electrical, SOLIDWORKS CAM, DraftSight,
+SOLIDWORKS PDM, SOLIDWORKS Manage,
+SOLIDWORKS Simulation, SOLIDWORKS Flow Simulation, SOLIDWORKS Plastics, SOLIDWORKS Composer, SOLIDWORKS Inspection, SOLIDWORKS Visualize</span><br><span>(2) 시뮬리아 전제품<br>SIMULIA Abaqus, SIMULIA XFlow, SIMULIA CST 등</span>
+                                  
+                                            </li>
+                                        </ul>                                                                           
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                        
+                    </div>
+                    <!-- 팝업 끝 -->
+
+            </li>
+
+            <!--wordpress 07 : 파트너사 팝업 (세인이엔에스) -->
+            <li class="pop05 conV useV" condata="purposeAll areaAll company capital_area busan" style="display: none;">
+                <div class="partnersPop">
+                    <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner05.png" alt="세인이엔에스"> </div>
+                    <div class="partner-title">
+                        <h2>세인이엔에스</h2>
+                        <p>세인이엔에스는 고객만족을 최우선의 가치로 기업의 <br class="sub_m">
+                            시장 경쟁력 강화를 위해 최선을 다하고 있습니다.
+                        </p>
+                        <div class="btn_po">                                  
+                            <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+                        </div> 
+                    </div>
+                </div>
+                    <!-- 팝업영역 -->
+                    <div class="modal-p">
+                       
+                        <ul class="pop-contents-parents">
+                            <li><span class="cl">닫기버튼</span></li>
+                            <li>
+                                <h1>세인이엔에스</h1>
+                                <div class="child-partner-info">
+                                    <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner05.png" alt="세인이엔에스"></div>
+                                    <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner05.png" alt="세인이엔에스"></div>   
+                                    <div class="p-box">
+                                        <p>세인이엔에스는 고객만족을 최우선의 가치로 기업의 시장 경쟁력 강화를 위해 최선을 다하고 있습니다. 
+                                            다양한 산업 포트폴리오를 기반으로, 고객에게 시장 선점을 위한 최적의 솔루션 제공하며, 교육과 기술 지원(고객사 방문 및 온라인) 및 컨설팅을 제공하고 있습니다. 
+                                            고객을 Global Leader로 성장시키기 위해 언제나 최선을 다하고 있습니다
+                                        </p>
+                                        <div class="btn_po">
+                                            <a href="http://www.seinens.com/" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <ul class="child-partner-text">
+                                <li>
+                                    <div class="partner-icon"> 
+                                        <div class="icon_po">                                         
+                                        <i></i>회사주소 </div>                                       
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">
+                                            <li><h3>서울본사 : <span>서울특별시 금천구 가산디지털2로 108, 뉴티캐슬 306호 08506 <br class="p"> (02-6277-3060)</span></h3></li> 
+                                            <li><h3>부산지사 :  <span>부산광역시 강서구 유통단지1로 41, 부산티플렉스 105동 221호 46721 <br class="p"> (051-796-3657)</span></h3></li> 
+                                        </ul>                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po"> 
+                                        <i></i>엔지니어 구성</div> 
+                                    </div>
+                                    <div class="detail-info">
+                                    <h3><b>엔지니어 개발 인력 총 인원 (6명)</b></h3>
+                                        <ul class="detail-info-depth">
+                                            <li><p>- CAD 설계 (2명)</p></li>  
+                                            <li><p>- 시뮬레이션 (2명)</p></li>     
+                                            <li><p>- 데이터 관리 및 협업 (2명)</p></li>                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po"> 
+                                        <i></i>판매 솔루션</div> 
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">                            
+                                            <li class="wd100"><h3 class="line-1">SOLIDWORKS, SOLIDWORKS Simulation, FlowSimulation, EPDM, Composer, Electrical, EPDM&amp;SOLIDWORKS&amp;DraftSight API 개발 등) </h3>                                    
+                                            </li>
+                                        </ul>                                                                           
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                        
+                    </div>
+                    <!-- 팝업 끝 -->
+
+            </li>
+
+
+            <!--wordpress 10 : 파트너사 팝업 (솔코) -->
+            <li class="pop08 conV useV" condata="purposeAll areaAll company capital_area busan daegu">
+                <div class="partnersPop">
+                    <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner08.png" alt="솔코"> </div>
+                    <div class="partner-title">
+                        <h2>솔코</h2>
+                        <p>솔코는 SOLIDWORKS의 공식 파트너사로 제품 출시  <br class="sub_m">
+                            전 과정에 걸쳐 2D/3D Design, Validation,  <br class="sub_m">
+                            Manufacturing, Management, 3DEXPEREINCE...
+                        </p>
+                        <div class="btn_po">                                  
+                            <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+                        </div> 
+                    </div>
+                </div>
+                    <!-- 팝업영역 -->
+                    <div class="modal-p">
+                       
+                        <ul class="pop-contents-parents">
+                            <li><span class="cl">닫기버튼</span></li>
+                            <li>
+                                <h1>솔코</h1>
+                                <div class="child-partner-info">
+                                    <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner08.png" alt="솔코"></div>
+                                    <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner08.png" alt="메이븐"></div> 
+                                    <div class="p-box">
+                                        <p>솔코는 SOLIDWORKS의 공식 파트너사로 제품 출시 전 과정에 걸쳐 2D/3D Design, Validation, Manufacturing, Management, 3DEXPEREINCE 솔루션과 교육, 컨설팅을 포함한 통합 서비스를 제공하고 있습니다. 
+                                            2009년부터 “고객의 행복한 미래를 향해 언제나 함께 합니다.”라는 기업이념 가지고 고객의 제품 품질 향상 및 시장 경쟁력 강화를 이루는 인더스트리 솔루션 리더가 되기 위해 노력하고 있습니다.
+                                        </p>
+                                        <div class="btn_po">
+                                            <a href="https://solidkorea.co.kr/" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <ul class="child-partner-text">
+                                <li>
+                                    <div class="partner-icon">  
+                                        <div class="icon_po">                                        
+                                        <i></i>회사주소</div>                                        
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">
+                                            <li><h3>의왕본사 : <span>경기도 의왕시 이미로 40 인덕원IT밸리 C동 414호(031-8069-8300)</span></h3></li> 
+                                            <li><h3>창원지사 : <span>경상남도 창원시 의창구 차룡로 48번길 44 창원스마트업타워 F1110호 <br class="p">(055-714-1010)</span></h3></li> 
+                                            <li><h3>대구지사 : <span>대구광역시 달서구 달서대로 559 이앤씨이노비즈타워 304호(053-721-6749)</span></h3></li> 
+                                        </ul>                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po"> 
+                                        <i></i>엔지니어 구성</div> 
+                                    </div>
+                                    <div class="detail-info">
+                                    <h3><b>엔지니어 개발 인력 총 인원 (7명)</b></h3>
+                                        <ul class="detail-info-depth">
+                                            <li><p>- CAD 설계 / 전자기장 설계 (2명 / 1명)</p></li>  
+                                            <li><p>- 시뮬레이션 (2명)</p></li>  
+                                            <li><p>- 데이터 관리 및 협업 (2명)</p></li> 
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po">  
+                                        <i></i>판매 솔루션</div>
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">                            
+                                            <li><h3>SOLIDWORKS</h3></li>    
+                                            <li><h3>SOLIDWORKS SIMULATION</h3></li>  
+                                            <li><h3>SOLIDWORKS COMPOSER</h3></li>    
+                                            <li><h3>SOLIDWORKS INSPECTION</h3></li>  
+                                            <li><h3>SOLIDWORKS PDM</h3></li>    
+                                            <li><h3>SOLIDWORKS ELECTRICAL</h3></li>  
+                                            <li><h3>SOLIDWORKS VISUALIZE</h3></li>    
+                                            <li><h3>DraftSight</h3></li>  
+                                        </ul>                                                                           
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                        
+                    </div>
+                    <!-- 팝업 끝 -->
+
+            </li>
+
+            <!--wordpress 06 : 파트너사 팝업 (웹스시스템코리아) -->
+            <li class="pop04 conV useV" condata="purposeAll areaAll company capital_area busan">
+                <div class="partnersPop">
+                    <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner04.png" alt="웹스시스템코리아"> </div>
+                    <div class="partner-title">
+                        <h2>웹스시스템코리아</h2>
+                        <p>웹스시스템코리아는 솔리드웍스의 국내 공식  <br class="sub_m">
+                            파트너사로 1996년부터 고객의 Needs에 맞는  <br class="sub_m">
+                            솔루션을 제공하며 고객의 성장을 위해 함께...
+                        </p>
+                        <div class="btn_po">                                  
+                            <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+                        </div> 
+                    </div>
+                </div>
+                    <!-- 팝업영역 -->
+                    <div class="modal-p">
+                       
+                        <ul class="pop-contents-parents">
+                            <li><span class="cl">닫기버튼</span></li>
+                            <li>
+                                <h1>웹스시스템코리아</h1>
+                                <div class="child-partner-info">
+                                    <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner04.png" alt="웹스시스템코리아"></div>
+                                    <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner04.png" alt="웹스시스템코리아"></div>                                    
+                                    <div class="p-box">
+                                        <p>웹스시스템코리아는 솔리드웍스의 국내 공식 파트너사로 1996년부터 고객의 Needs에 맞는 솔루션을 제공하며 고객의 성장을 위해 함께 성장하고 있습니다. 
+                                            데스크탑 및 클라우드 환경에서의 통합 솔루션을 통해 문제를 사전에 예측하고 최적화된 방안을 제공하고 있습니다. 
+                                            고객의 제품 개발 비용과 시간을 절감하고 지속적인 고객 서비스를 통해 고객 비즈니스 환경에 최상의 가치를 창출하고 있습니다.
+                                        </p>
+                                        <div class="btn_po">
+                                            <a href="https://www.websco.co.kr:6525/mall/index.asp" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <ul class="child-partner-text">
+                                <li>
+                                    <div class="partner-icon">  
+                                        <div class="icon_po">                                       
+                                        <i></i>회사주소 </div>                                        
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">
+                                            <li><h3>서울본사 : <span>서울시 금천구 가산디지털1로 205 KCC웰츠밸리 905호(가산동) 08501  <br class="p">(02-2138-7177)</span></h3></li> 
+                                            <li><h3>창원지사 :  <span>경남 창원시 성산구 용지로169번길 11-31, 동진빌딩 3층(용호동) 51436  <br class="p">(055-262-3431)</span></h3></li> 
+                                        </ul>                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po">  
+                                        <i></i>엔지니어 구성</div>
+                                    </div>
+                                    <div class="detail-info">
+                                        <h3><b>엔지니어 개발 인력 총 인원 (4명)</b></h3>
+                                        <ul class="detail-info-depth">
+                                            <li><p>- CAD 설계 (2명)</p></li>  
+                                            <li><p>- 시뮬레이션 (2명)</p></li>                               
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po"> 
+                                        <i></i>판매 솔루션</div> 
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">                            
+                                            <li class="wd100"><h3>Desktop Portfolio:  <br>
+                                                </h3>
+                                                <span>- CAD: SOLIDWORKS, DraftSight</span> <br>
+                                                <span>- SIM: SOLIDWORKS Simulation, SOLIDWORKS Flow Simulation, <br>SOLIDWORKS Plastics</span> <br>
+                                                <span>- ETC: SOLIDWORKS MBD, Composer, Visualize</span>
+                                            </li>
+                                        </ul>                                                                           
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                        
+                    </div>
+                    <!-- 팝업 끝 -->
+
+            </li>
+
+
+
+<!--wordpress 04 : 파트너사 팝업 (위버맨시) -->
+            <li class="pop02 conV useV" condata="purposeAll areaAll company capital_area daejeon busan daegu">
+                <div class="partnersPop">
+                    <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner02.png" alt="위버맨시"> </div>
+                    <div class="partner-title">
+                        <h2>위버맨시</h2>
+                            <p>위버맨시는 다쏘시스템의 공식 파트너사로 <br class="sumb_m">
+                                3DEXPERIENCE Works를 비롯한 제품 개발 <br class="sumb_m"> 
+                                솔루션을 국내에 보급하는 국내 공식 파트너사입니다. </p>
+                        <div class="btn_po">                                  
+                            <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+                        </div> 
+                    </div>
+                </div>
+                    <!-- 팝업영역 -->
+                    <div class="modal-p">
+                       
+                        <ul class="pop-contents-parents">
+                            <li><span class="cl">닫기버튼</span></li>
+                            <li>
+                                <h1>위버맨시</h1>
+                                <div class="child-partner-info">
+                                    <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner02.png" alt="위버맨시"></div>
+                                    <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner02.png" alt="위버맨시"></div>
+                                    <div class="p-box">
+                                        <p>위버맨시는 다쏘시스템의 공식 파트너사로 3DEXPERIENCE Works를 비롯한 제품 개발 솔루션을 국내에 보급하는 국내 공식 파트너사입니다. 
+                                            IT 기술에 대한 전문성과 이해를 바탕으로 3D 솔루션 및 관련 서비스 분야의 시장 개척과 고객 창출을 추구하고 있습니다. 
+                                            서울 본사 및 수원, 대전, 대구, 창원에 지사를 설립해 전국의 고객을 대상으로 기술교육, 방문지원, 원격 지원, 컨설팅 등 기술 서비스를 제공하고 있습니다. 
+                                            또한 고객 만족과 고객과의 동반성장을 최고의 목표로 지향하고 있으며 지속적인 도전을 통해 혁신기업으로 성장해 나가고 있습니다. 
+                                        </p>
+                                        <div class="btn_po">
+                                            <a href="https://www.overman.co.kr/main/" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <ul class="child-partner-text">
+                                <li>
+                                    <div class="partner-icon">      
+                                        <div class="icon_po">                                   
+                                        <i></i>회사주소 </div>                                        
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">
+                                            <li><h3>서울본사 :  <span>서울특별시 영등포구 여의나루로 67 신송빌딩 6층 (02-2070-7929)</span></h3>
+                                            </li>
+                                            <li><h3>수원사무소 :  <span>경기도 수원시 팔달구 장다리로 328 MJ아이티벨리 3층 (031-233-7929)</span></h3>
+                                            </li>
+                                            <li><h3>대전지사 :  <span>대전광역시 유성구 은구비남로 13 SK허브 2층 (042-825-4664)</span></h3>
+                                            </li>
+                                            <li><h3>대구지사 :  <span>대구광역시 달서구 성서공단로 217 한국산업단지공단 대구비즈니스센터 5층 (053-583-7929)</span></h3>
+                                            </li>
+                                            <li><h3>창원지사 :  <span>경상남도 창원시 의창구 차룡로 48번길 44 스마트업타워 14층 (055-255-8586)</span></h3>
+                                            </li>
+                                        </ul>                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po"> 
+                                        <i></i>엔지니어 구성</div> 
+                                    </div>
+                                    <div class="detail-info">
+                                       <h3><b>엔지니어 개발 인력 총 인원 (8명)</b></h3>
+                                        <ul class="detail-info-depth">
+                                            <li><p>-  CAD 설계 (4명)</p></li>  
+                                            <li><p>- 시뮬레이션 (2명)</p></li>
+<li><p>- 데이터 관리 및 협업 (2명)</p></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po">  
+                                        <i></i>판매 솔루션</div>
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">
+                                          
+                                            <li class="wd100"><h3>Desktop Portfolio: <br>
+                                                </h3><span>SOLIDWORKS, SOLIDWORKS Simulation, SOLIDWORKS PDM
+</span>
+                                            </li>
+                                        </ul>                                                                           
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                        
+                    </div>
+                    <!-- 팝업 끝 -->
+              
+            </li>
+
+<!--wordpress 11 : 파트너사 팝업 (케이앤솔루션) -->
+<li class="pop09 conV useV" condata="purposeAll areaAll company capital_area">
+    <div class="partnersPop">
+        <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner09.png" alt="케이앤솔루션"> </div>
+        <div class="partner-title">
+            <h2>케이앤솔루션</h2>
+            <p>케이앤솔루션은 고객의 제품개발 혁신을 지원하는 <br class="sub_m">
+                디지털 파트너이자 솔리드웍스의 국내 공식 <br class="sub_m">
+                파트너사입니다. 
+            </p>
+            <div class="btn_po">                                  
+                <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+            </div> 
+        </div>
+    </div>
+        <!-- 팝업영역 -->
+        <div class="modal-p">
+           
+            <ul class="pop-contents-parents">
+                <li><span class="cl">닫기버튼</span></li>
+                <li>
+                    <h1>케이앤솔루션</h1>
+                    <div class="child-partner-info">
+                        <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner09.png" alt="케이앤솔루션"></div>
+                        <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner09.png" alt="메이븐"></div> 
+                        <div class="p-box">
+                            <p>케이앤솔루션은 고객의 제품개발 혁신을 지원하는 디지털 파트너이자 솔리드웍스의 국내 공식 파트너사입니다. 
+                                중견중소기업의 혁신적인 기술 개발 및 제품 품질 향상을 위해 3D CAD 솔루션인 SOLIDWORKS와 3DEXPERIENCE 플랫폼을 제공하고 있습니다.
+                                그뿐만 아니라 CAE 통한 개발 검증을 바탕으로 제품 개발상의 신속한 의사결정과 기민한 실행력, PLM 시스템 공급을 통한 제품 개발 프로세스 혁신을 지원하고 있습니다. 
+                            </p>
+                            <div class="btn_po">
+                                <a href="https://www.kns2.co.kr/" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <ul class="child-partner-text">
+                    <li>
+                        <div class="partner-icon">  
+                            <div class="icon_po">                                       
+                            <i></i>회사주소 </div>                                        
+                        </div>
+                        <div class="detail-info">
+                            <ul class="detail-info-depth">
+                                <li><h3>본사 : <span>경기도 수원시 영통구 창룡대로 260, 광교센트럴비즈타워 906호 16229 <br class="p">(031-216-7280)</span></h3></li> 
+                            </ul>                                    
+                        </div>
+                    </li>
+                    <li>
+                        <div class="partner-icon">
+                            <div class="icon_po">  
+                            <i></i>엔지니어 구성</div>
+                        </div>
+                        <div class="detail-info">
+                        <h3><b>엔지니어 개발 인력 총 인원 (6명)</b></h3>
+                            <ul class="detail-info-depth">
+                                <li><p>- CAD 설계 (2명)</p></li>  
+                                <li><p>- 시뮬레이션 (2명)</p></li>  
+                                <li><p>- 데이터 관리 및 협업 (2명)</p></li> 
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="partner-icon">
+                            <div class="icon_po"> 
+                            <i></i>판매 솔루션</div> 
+                        </div>
+                        <div class="detail-info">
+                            <ul class="detail-info-depth">                            
+                                <li class="wd100"><h3>Desktop Portfolio: </h3>
+                                    <span>- CAD : SOLIDWORKS, DraftSight</span><br class="sub_m">
+                                    <span>- SIM : SOLIDWORKS Simulation, SOLIDWORKS Flow Simulation, <br class="sub_m">SOLIDWORKS Plastics</span><br class="sub_m">
+                                    <span>- TCC : SOLIDWORKS Composer, SOLIDWORKS Visualize</span><br class="sub_m">
+                                    <span>- MBD : SOLIDWORKS MBD, SOLIDWORKS CAM</span><br class="sub_m">
+                                    <span>- DDM : SOLIDWORKS PDM, EXALEAD OnePart, SOLIDWORKS Manage</span><br class="sub_m">
+                                </li>    
+                            
+                            </ul>                                                                           
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+            
+        </div>
+        <!-- 팝업 끝 -->
+
+</li>
+
+
+
+
+
+
+
+
+<!--wordpress 12 : 파트너사 팝업 (큐빅시스템즈) -->
+            <li class="pop10 conV useV" condata="purposeAll areaAll company education capital_area">
+                <div class="partnersPop">
+                    <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner10.png" alt="큐빅시스템즈"> </div>
+                    <div class="partner-title">
+                        <h2>큐빅시스템즈</h2>
+                        <p>큐빅시스템즈는 4차산업혁명시대 대한민국 <br class="sub_m">
+                            교육산업을 선도하는 기업으로 솔리드웍스의 <br class="sub_m">
+                            공식 파트너사입니다. 
+                        </p>
+                        <div class="btn_po">                                  
+                            <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+                        </div> 
+                    </div>
+                </div>
+                    <!-- 팝업영역 -->
+                    <div class="modal-p">
+                        
+                        <ul class="pop-contents-parents">
+                            <li><span class="cl">닫기버튼</span></li>
+                            <li>
+                                <h1>큐빅시스템즈</h1>
+                                <div class="child-partner-info">
+                                    <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner10.png" alt="큐빅시스템즈"></div>
+                                    <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner10.png" alt="메이븐"></div> 
+                                    <div class="p-box">
+                                        <p>큐빅시스템즈는 4차산업혁명시대 대한민국 교육산업을 선도하는 기업으로 솔리드웍스의 공식 파트너사입니다. 
+                                            풍부한 경험과 최고의 기술력으로 4차산업혁명시대 스마트 인재 양성을 위한 교육과정 및 정부 프로젝트사업을 지역환경 맞춤형으로 컨설팅하여 제공하고 있습니다. 
+                                            또한 미래의 지속가능한 가치와 혁신을 위한 글로벌 솔루션을 제공하여 경쟁력을 확보하고 다양한 직업 교육 기술지원을 제공하고 있습니다.
+                                        </p>
+                                        <div class="btn_po">
+                                            <a href="http://www.cubicsystems.kr/" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <ul class="child-partner-text">
+                                <li>
+                                    <div class="partner-icon">   
+                                        <div class="icon_po">                                      
+                                        <i></i>회사주소 </div>                                        
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">
+                                            <li><h3><span>서울특별시 금천구 가산 디지털 1로 171.1107호(가산동, 가산 SK V1 센터) 08503 <br class="p">(02-6274-2822)</span></h3></li> 
+                                        </ul>                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po"> 
+                                        <i></i>엔지니어 구성</div> 
+                                    </div>
+                                    <div class="detail-info">
+                                    <h3><b>엔지니어 개발 인력 총 인원 (2명)</b></h3>
+                                        <ul class="detail-info-depth">
+                                            <li><p>- CAD 설계 (2명)</p></li>                                  
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po"> 
+                                        <i></i>판매 솔루션</div> 
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">                            
+                                            <li class="wd100"><h3>Desktop Portfolio</h3>
+                                                <span>- SOLIDWORKS EDU EDITION 제품군(FULL MODULE제공)</span><br class="sub_m">   
+                                                <span>- SOLIDWORKS EDU EDITION Premium</span><br class="sub_m">
+                                                <span>- SOLIDWORKS CAM</span><br class="sub_m">
+                                                <span>- SOLIDWORKS Simulation</span><br class="sub_m">                                
+                                            </li>    
+                                            <li class="wd100"><h3>Cloud  Portfolio</h3>
+                                                <span>- 3DEXPERIENCE WORKS 교육용 제품군</span><br class="sub_m">                                   
+                                            </li> 
+                                        </ul>                                                                           
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                        
+                    </div>
+                    <!-- 팝업 끝 -->
+
+            </li>
+
+
+<!--wordpress 14 : 파트너사 팝업 (큐빅테크) -->
+<li class="pop12 conV useV" condata="purposeAll areaAll company capital_area">
+    <div class="partnersPop">
+        <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner12.png" alt="큐빅테크"> </div>
+        <div class="partner-title">
+            <h2>큐빅테크</h2>
+            <p>큐빅테크는 1990년, 국내 CAM 소프트웨어를 국내 <br class="sub_m">
+                자체기술로 최초로 개발하였으며 CAM 소프트웨어를 <br class="sub_m">
+                시작으로 CNC Simulation CAE System과 더불어...
+            </p>
+            <div class="btn_po">                                  
+                <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+            </div> 
+        </div>
+    </div>
+        <!-- 팝업영역 -->
+        <div class="modal-p">
+           
+            <ul class="pop-contents-parents">
+                <li><span class="cl">닫기버튼</span></li>
+                <li>
+                    <h1>큐빅테크</h1>
+                    <div class="child-partner-info">
+                        <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner12.png" alt="큐빅테크"></div>
+                        <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner12.png" alt="메이븐"></div> 
+                        <div class="p-box">
+                            <p>큐빅테크는 1990년, 국내 CAM 소프트웨어를 국내 자체기술로 최초로 개발하였으며 CAM 소프트웨어를 시작으로 CNC Simulation CAE System과 더불어 제조 ICT를 거쳐 최근 스마트팩토리 구축 솔루션까지 다양한 사업 분야를 지원하고 있습니다. 
+                                "현장을 더 스마트하게" 라는 표어를 중심으로 현장 중심의 솔루션을 제공하며 현장에 적합한 인력양성을 위해서 CNC Simulation, 3D CAD/CAM 등 다양한 솔루션을 교육기관에 제공하고 있습니다.                                 
+                            </p>
+                            <div class="btn_po">
+                                <a href="http://www.cubictek.co.kr/" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <ul class="child-partner-text">
+                    <li>
+                        <div class="partner-icon"> 
+                            <div class="icon_po">                                         
+                            <i></i>회사주소</div>                                        
+                        </div>
+                        <div class="detail-info">
+                            <ul class="detail-info-depth">
+                                <li class="line-1"><h3>서울본사 : </h3>
+                                    <span>서울특별시 구로구 구로동 디지털로 301~3 272</span>
+                                </li> 
+                            </ul>                                    
+                        </div>
+                    </li>
+                    <li>
+                        <div class="partner-icon">
+                            <div class="icon_po">
+                            <i></i>엔지니어 구성</div>  
+                        </div>
+                        <div class="detail-info">
+                        <h3><b>엔지니어 개발 인력 총 인원 (2명)</b></h3>
+                            <ul class="detail-info-depth">
+                                <li><p>- CAD 설계 (2명)</p></li>  
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="partner-icon">
+                            <div class="icon_po">
+                            <i></i>판매 솔루션</div>  
+                        </div>
+                        <div class="detail-info">
+                            <ul class="detail-info-depth">                            
+                                <li><h3>SOLIDWORKS</h3></li>                                           
+                            </ul>                                                                           
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+            
+        </div>
+        <!-- 팝업 끝 -->
+
+</li>   
+
+<!--wordpress 13 : 파트너사 팝업 (프로랩) -->
+            <li class="pop11 conV useV" condata="purposeAll areaAll company capital_area busan">
+                <div class="partnersPop">
+                    <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner11.png" alt="프로랩"> </div>
+                    <div class="partner-title">
+                        <h2>프로랩</h2>
+                        <p>프로랩은 솔리드웍스와 3DEXPERIENCE Works의 <br class="sub_m">
+                            교육 부분 공식 파트너사입니다.
+                        </p>
+                        <div class="btn_po">                                  
+                            <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+                        </div> 
+                    </div>
+                </div>
+                    <!-- 팝업영역 -->
+                    <div class="modal-p">
+                       
+                        <ul class="pop-contents-parents">
+                            <li><span class="cl">닫기버튼</span></li>
+                            <li>
+                                <h1>프로랩</h1>
+                                <div class="child-partner-info">
+                                    <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner11.png" alt="프로랩"></div>
+                                    <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner11.png" alt="메이븐"></div> 
+                                    <div class="p-box">
+                                        <p>프로랩은 솔리드웍스와 3DEXPERIENCE Works의 교육 부분 공식 파트너사입니다. 
+                                            3DEXPERIENCE 플랫폼과 애플리케이션을 활용하여 교육기관에 3D Design 솔루션을 제공하고 있습니다 
+                                            Learning FACTORY를 구현할 수 있는 설계, 검증, 데이터 관리 및 시제품 제작까지 융합된 프로젝트 수업을 할 수있는 통합된 워크플로우 및 교육 솔루션을 제공하고 있습니다. 
+                                            또한 교육에 필요한 다양한 교재 제공 및 개발과 전문적인 엔지니어를 보유하고 있는 유일한 공식 파트너사입니다. 
+                                            실무 중심의 산업체 맞춤 교육, 자격증 취득 중점 교육, 프로젝트 융합 교육을 통하여 3D Design 분야의 최상의 솔루션을 제공해 드리기 위해 노력하고 있습니다.                                    
+                                        </p>
+                                        <div class="btn_po">
+                                            <a href="http://www.prolab.co.kr/" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <ul class="child-partner-text">
+                                <li>
+                                    <div class="partner-icon">   
+                                        <div class="icon_po">                                       
+                                        <i></i>회사주소</div>                                        
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">
+                                            <li><h3>서울본사 : <span>서울특별시 금천구 가산디지털2로 184, 벽산디지털밸리2차 1111호 08501 <br class="sub_m">(02-834-0526)</span></h3></li> 
+                                            <li><h3>부산지사 : <span>경상남도 양산시 물금읍 부산대학로 150, 501호 (대한빌딩) 50652 <br class="sub_m">(051-581-8460)</span></h3></li> 
+                                        </ul>                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po">  
+                                        <i></i>엔지니어 구성</div>
+                                    </div>
+                                    <div class="detail-info">
+                                    <h3><b>엔지니어 개발 인력 총 인원 (3명)</b></h3>
+                                        <ul class="detail-info-depth">
+                                            <li><p>- CAD 설계 (2명)</p></li>    
+                                            <li><p>- 시뮬레이션 (1명)</p></li>                                
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partner-icon">
+                                        <div class="icon_po"> 
+                                        <i></i>판매 솔루션</div> 
+                                    </div>
+                                    <div class="detail-info">
+                                        <ul class="detail-info-depth">                            
+                                            <li><h3>SOLIDWORKS EDU Edition  <span>(교육용)</span></h3></li>   
+                                            <li><h3>SOLIDWORKS RESEARCH    <span>(연구용)</span></h3></li> 
+                                            <li><h3>SOLIDWORKS EDU Edition - Private Career School  <span>(학원용)</span></h3></li> 
+                                            <li><h3>3DEXPERIENCE-Education   <span>(Cloud)</span></h3></li> 
+                                        
+                                        </ul>                                                                           
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                        
+                    </div>
+                    <!-- 팝업 끝 -->
+
+            </li>       
+            
+<!--wordpress 09 : 파트너사 팝업 (프리즘) -->
+<li class="pop07 conV useV" condata="purposeAll areaAll company capital_area">
+    <div class="partnersPop">
+        <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner07.png" alt="프리즘"> </div>
+        <div class="partner-title">
+            <h2>프리즘</h2>
+            <p>프리즘은 SOLIDWORKS 제품군과 CAE 소프트웨어를 <br class="sub_m">
+                공급/지원하고 있는 CAD/CAE 전문 국내 공식 <br class="sub_m">
+                파트너사입니다. 
+            </p>
+            <div class="btn_po">                                  
+                <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+            </div> 
+        </div>
+    </div>
+        <!-- 팝업영역 -->
+        <div class="modal-p">
+          
+            <ul class="pop-contents-parents">
+                <li><span class="cl">닫기버튼</span></li>
+                <li>
+                    <h1>프리즘</h1>
+                    <div class="child-partner-info">
+                        <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner07.png" alt="프리즘"></div>
+                        <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner07.png" alt="메이븐"></div> 
+                        <div class="p-box">
+                            <p>프리즘은 SOLIDWORKS 제품군과 CAE 소프트웨어를 공급/지원하고 있는 CAD/CAE 전문 국내 공식 파트너사입니다. 
+                                다양한 산업분야에서 축적된 해석 경험과 기술을 보유하고 있으며, 개발 기간 단축과 기술 경쟁력 확보를 고민하고 있는 국내 기업들에게 최적의 솔루션을 제공하고 있습니다.
+                            </p>
+                            <div class="btn_po">
+                                <a href="https://www.prism21.co.kr/" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <ul class="child-partner-text">
+                    <li>
+                        <div class="partner-icon"> 
+                            <div class="icon_po">                                        
+                            <i></i>회사주소</div>                                    
+                        </div>
+                        <div class="detail-info">
+                            <ul class="detail-info-depth">
+                                <li><h3><span>경기도 성남시 분당구 황새울로 325, 704(서현동,서현하우비) <br class="p">(031-716-9488)</span></h3></li> 
+                            
+                            </ul>                                    
+                        </div>
+                    </li>
+                    <li>
+                        <div class="partner-icon">
+                            <div class="icon_po"> 
+                            <i></i>엔지니어 구성</div> 
+                        </div>
+                        <div class="detail-info">
+                        <h3><b>엔지니어 개발 인력 총 인원 (6명)</b></h3>
+                            <ul class="detail-info-depth">
+                                <li><p>- CAD 설계 / 전자기장 설계 (3명 / 1명)</p></li>  
+                                <li><p>- 시뮬레이션 (2명)</p></li>  
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="partner-icon">
+                            <div class="icon_po">  
+                            <i></i>판매 솔루션</div>
+                        </div>
+                        <div class="detail-info">
+                            <ul class="detail-info-depth">                            
+                                <li><h3>SOLIDWORKS</h3></li>    
+                                <li><h3>SOLIDWORKS Simulation</h3></li>  
+                                <li><h3>SOLIDWORKS Flow Simulation</h3></li>  
+                                <li><h3>SOLIDWORKS Plastics</h3></li>  
+                                <li><h3>SOLIDWORKS Sustainability</h3></li>  
+                                <li><h3>SOLIDWORKS Electrical 2D &amp; 3D</h3></li> 
+                                <li><h3>SOLIDWORKS Composer</h3></li>  
+                                <li><h3>SOLIDWORKS Visualize</h3></li>  
+                                <li><h3>SOLIDWORKS CAM</h3></li>  
+                                <li><h3>SOLIDWORKS MBD</h3></li>  
+                            </ul>                                                                           
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+            
+        </div>
+        <!-- 팝업 끝 -->
+
+</li>
+<!--wordpress 05 : 파트너사 팝업 (한영솔루텍) -->
+<li class="pop03 conV useV" condata="purposeAll areaAll company capital_area">
+    <div class="partnersPop">
+        <div class="img"><img src="https://www.go-cloud-fans.com/img/sub_partner03.png" alt="한영솔루텍"> </div>
+        <div class="partner-title">
+            <h2>한영솔루텍</h2>
+            <p>한영솔루텍은 디지털 트윈 기술을 선두하는 <br class="sub_m">
+                SOLIDWORKS의 국내 공식 파트너사입니다. </p>
+                <div class="btn_po">                                  
+                    <a href="javascript:void(0);" class="btnB">더 알아보기</a><br>                                    
+                </div> 
+        </div>
+
+    </div>
+        <!-- 팝업영역 -->
+        <div class="modal-p">
+           
+            <ul class="pop-contents-parents">
+                <li><span class="cl">닫기버튼</span></li>
+                <li>
+                    <h1>한영솔루텍</h1>
+                    <div class="child-partner-info">
+                        <div class="img p"><img src="https://www.go-cloud-fans.com/img/pop_partner03.png" alt="한영솔루텍"></div>
+                        <div class="img mo_img"><img src="https://www.go-cloud-fans.com/img/sub_partner03.png" alt="한영솔루텍"></div>
+                        <div class="p-box">
+                            <p>한영솔루텍은 디지털 트윈 기술을 선두하는 SOLIDWORKS의 국내 공식 파트너사입니다. 
+                                클라우드 기반 3DEXPERIENCE Works 및 SOLIDWORKS, DraftSight, 해석 제품인 SIMULATION, 데이터관리의 핵심 제품인 PDM을 국내에 공급하고 있습니다. 
+                                또한 스마트 공장, 스마트 공방, 바우쳐사업 등록 업체로 풍부한 관련 사업 진행 경험을 기반으로 인력양성을 위해 각종 기관과 협력하여 교육 및 컨설팅을 진행하고 있습니다.
+                            </p>
+                            <div class="btn_po">
+                                <a href="http://www.hysolutech.com/" class="btnA" target="_blank" rel="noopener">홈페이지 가기</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <ul class="child-partner-text">
+                    <li>
+                        <div class="partner-icon"> 
+                            <div class="icon_po">                                       
+                            <i></i>회사주소 </div>                                         
+                        </div>
+                        <div class="detail-info">
+                            <ul class="detail-info-depth">
+                                <li class="line-1"><h3>서울본사 : </h3>
+                                    <span>서울특별시 금천구 가산디지털1로 30, 에이스하이엔드타워10차 505호 <br class="p">
+                                        우.08591 (02-891-8110)</span>
+                                </li>                                
+                            </ul>                                    
+                        </div>
+                    </li>
+                    <li>
+                        <div class="partner-icon">
+                            <div class="icon_po"> 
+                            <i></i>엔지니어 구성</div> 
+                        </div>
+                        <div class="detail-info">
+                        <h3><b>엔지니어 개발 인력 총 인원 (7명)</b></h3>
+                            <ul class="detail-info-depth">
+                                <li><p>- CAD 설계 (3명)</p></li>  
+                                <li><p>- 시뮬레이션 (2명)</p></li>
+                                <li><p>- 데이터 관리 및 협업 (2명)</p></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="partner-icon">
+                            <div class="icon_po"> 
+                            <i></i>판매 솔루션</div> 
+                        </div>
+                        <div class="detail-info">
+                            <ul class="detail-info-depth">
+                            
+                                <li class="wd100"><h3>Desktop Portfolio: <br>
+                                    </h3><span>SOLIDWORKS, SOLIDWORKS Simulation, SOLIDWORKS DDM</span>
+                                </li>
+                            </ul>                                                                           
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+            
+        </div>
+        <!-- 팝업 끝 -->
+
+</li>
+
+
+
+        </ul>
+         
+        </div>
+    </div>
+
+
+    
+    </div>
+</section>
+
+  </div>
+</body>
+</html>
